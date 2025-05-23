@@ -1,0 +1,177 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container */
+.login-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Login form box */
+.login-form {
+  background-color: #fff;
+  padding: 2.5rem 2.8rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 100%;
+  animation: slideIn 0.8s ease forwards;
+}
+
+/* Heading */
+.login-heading h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  animation: zoomIn 1s ease;
+}
+
+/* Form fields */
+form input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.3rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+form input:focus {
+  outline: none;
+  border-color: #ff8552;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 133, 82, 0.3);
+}
+
+/* Button */
+form button {
+  width: 100%;
+  padding: 1rem;
+  background: #ff8552;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(255, 133, 82, 0.4);
+}
+
+form button:hover {
+  background-color: #e06b3b;
+}
+
+/* Account info */
+.signup-info {
+  text-align: center;
+  margin-top: 1.3rem;
+  animation: fadeIn 1.2s ease;
+}
+
+.signup-info p {
+  color: #444;
+}
+
+.signup-info a {
+  color: #ff8552;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-info a:hover {
+  text-decoration: underline;
+}
+/* Forgot Password Link */
+.forgot-password {
+  text-align: right;
+  margin-bottom: 1rem;
+  animation: fadeIn 1s ease;
+}
+
+.forgot-password a {
+  font-size: 0.95rem;
+  color: #ff8552;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.forgot-password a:hover {
+  color: #e06b3b;
+  text-decoration: underline;
+}
+
+
+/* Animations */
+@keyframes slideIn {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.fade-in { animation: fadeIn 0.8s ease forwards; }
+.slide-in { animation: slideIn 1s ease forwards; }
+.zoom-in { animation: zoomIn 1.2s ease forwards; }
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-form {
+    padding: 2rem 1.5rem;
+    max-width: 90%;
+  }
+
+  .login-heading h1 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .login-form {
+    max-width: 95%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .login-form {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .login-form {
+    max-width: 600px;
+  }
+
+  form button {
+    font-size: 1.1rem;
+  }
+}
